@@ -1,12 +1,16 @@
 Package: bccashinypivottabler
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Shiny Module to Create Pivot Tables
+Version: 1.0.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Zhenrui", "Yu", , "zhenrui.yu@bccancer.bc.ca", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+Imports: 
+    colourpicker,
+    openxlsx,
+    pivottabler,
+    shiny
