@@ -120,6 +120,7 @@ extract_bsPopover <- function (id, title, content, placement = "bottom", trigger
 #' @param session shiny input
 #' @param id \code{character}. An ID string
 #' @param app_colors \code{character}. Vector of two colors c("#59bb28", "#217346") (borders)
+#' @param remove_indicator \code{list} (NULL). The indicators do no use.
 #' @param app_linewidth \code{numeric}. Borders width
 #' @param data \code{data.frame} / \code{data.table}. Initial data table.
 #' @param pivot_cols \code{character} (NULL). Columns to be used as pivot in rows and cols.
@@ -157,6 +158,7 @@ shinypivottabler2 <- function(input, output, session,
                               data,
                               pivot_cols = NULL,
                               indicator_cols = NULL,
+                              remove_indicator=NULL,
                               max_n_pivot_cols = 100,
                               additional_expr_num = list(),
                               additional_expr_char = list(),
@@ -329,8 +331,6 @@ shinypivottabler2 <- function(input, output, session,
   })
 
   # update inputs
-  remove_indicator=NULL
-
   observe({
     data <- get_data()
     trigger_initialization()

@@ -12,6 +12,7 @@ shinypivottabler2(
   data,
   pivot_cols = NULL,
   indicator_cols = NULL,
+  remove_indicator = NULL,
   max_n_pivot_cols = 100,
   additional_expr_num = list(),
   additional_expr_char = list(),
@@ -40,6 +41,8 @@ shinypivottablerUI2(
 \item{pivot_cols}{\code{character} (NULL). Columns to be used as pivot in rows and cols.}
 
 \item{indicator_cols}{\code{character} (NULL). Columns on which indicators will be calculated.}
+
+\item{remove_indicator}{\code{list} (NULL). The indicators do no use.}
 
 \item{max_n_pivot_cols}{\code{numeric} (100). Maximum unique values for a \code{pivot_cols} if pivot_cols = NULL}
 
