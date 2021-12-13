@@ -22,7 +22,7 @@ devtools::install_github("yzr1996/bccashinypivottabler")
 
 ## Example
 
-This is a basic example which shows you how to use ``bccashinypivottabler' in Shiny App:
+This is a basic example which shows you how to use `bccashinypivottabler` in Shiny App:
 
 ``` r
 require(bccashinypivottabler)
