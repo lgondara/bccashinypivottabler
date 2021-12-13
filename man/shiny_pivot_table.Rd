@@ -12,7 +12,6 @@ shinypivottabler2(
   data,
   pivot_cols = NULL,
   indicator_cols = NULL,
-  remove_indicator = NULL,
   max_n_pivot_cols = 100,
   additional_expr_num = list(),
   additional_expr_char = list(),

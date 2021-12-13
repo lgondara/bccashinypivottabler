@@ -157,7 +157,6 @@ shinypivottabler2 <- function(input, output, session,
                               data,
                               pivot_cols = NULL,
                               indicator_cols = NULL,
-                              remove_indicator=NULL,
                               max_n_pivot_cols = 100,
                               additional_expr_num = list(),
                               additional_expr_char = list(),
@@ -330,6 +329,8 @@ shinypivottabler2 <- function(input, output, session,
   })
 
   # update inputs
+  remove_indicator=NULL
+
   observe({
     data <- get_data()
     trigger_initialization()
