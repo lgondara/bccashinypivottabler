@@ -2,6 +2,13 @@
 ###  PIVOT TABLE FOR SHINY  ###
 ###############################
 
+#' Title
+#'
+#' @param cnt
+#'
+#' @return
+#' @export
+#'
 rRound <- function(cnt) {
   set.seed(123)
   prob <- runif(1, 0, 1)
