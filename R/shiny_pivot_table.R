@@ -2,11 +2,11 @@
 ###  PIVOT TABLE FOR SHINY  ###
 ###############################
 
-#' Title
+#' Title Rounds the count number
 #'
-#' @param cnt
+#' @param cnt input number
 #'
-#' @return
+#' @return round number
 #' @export
 #'
 rRound <- function(cnt) {
