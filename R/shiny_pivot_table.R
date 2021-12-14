@@ -4,7 +4,7 @@
 
 #' Title Rounds the count number
 #'
-#' @param cnt input number
+#' @param cnt input number.
 #'
 #' @return round number
 #' @export

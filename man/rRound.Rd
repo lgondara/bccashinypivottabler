@@ -2,16 +2,16 @@
 % Please edit documentation in R/shiny_pivot_table.R
 \name{rRound}
 \alias{rRound}
-\title{Title}
+\title{Title Rounds the count number}
 \usage{
 rRound(cnt)
 }
 \arguments{
-\item{cnt}{}
+\item{cnt}{input number.}
 }
 \value{
-
+round number
 }
 \description{
-Title
+Title Rounds the count number
 }
