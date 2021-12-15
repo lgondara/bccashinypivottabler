@@ -799,7 +799,7 @@ shinypivottabler2 <- function(input, output, session,
           writeData(wb=wb, sheet="Pivot table", x= footername, startRow = 2)
 
           pt$writeToExcelWorksheet(wb = wb, wsName = "Pivot table",
-                                   topRowNumber = 1, leftMostColumnNumber = 1,
+                                   topRowNumber = 4, leftMostColumnNumber = 1,
                                    outputValuesAs = "formattedValueAsNumber",
                                    applyStyles = get_export_styles(), mapStylesFromCSS = TRUE)
           wb
