@@ -10,6 +10,8 @@ shinypivottabler2(
   output,
   session,
   data,
+  headername = NULL,
+  footername = NULL,
   pivot_cols = NULL,
   indicator_cols = NULL,
   remove_indicator = NULL,
@@ -36,7 +38,11 @@ shinypivottablerUI2(
 
 \item{session}{shiny input}
 
-\item{data}{\code{data.frame} / \code{data.table}. Initial data table.}
+\item{data}{\code{data.frame} / \code{data.table}. Initial data table.s}
+
+\item{headername}{\code{character}. An name used in Excel header when download the table.}
+
+\item{footername}{\code{character}. An name used in Excel footer when download the table.}
 
 \item{pivot_cols}{\code{character} (NULL). Columns to be used as pivot in rows and cols.}
 

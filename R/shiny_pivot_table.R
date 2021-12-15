@@ -126,10 +126,12 @@ extract_bsPopover <- function (id, title, content, placement = "bottom", trigger
 #' @param output shiny input
 #' @param session shiny input
 #' @param id \code{character}. An ID string
+#' @param headername \code{character}. An name used in Excel header when download the table.
+#' @param footername \code{character}. An name used in Excel footer when download the table.
 #' @param app_colors \code{character}. Vector of two colors c("#59bb28", "#217346") (borders)
 #' @param remove_indicator \code{list} (NULL). The indicators do no use.
 #' @param app_linewidth \code{numeric}. Borders width
-#' @param data \code{data.frame} / \code{data.table}. Initial data table.
+#' @param data \code{data.frame} / \code{data.table}. Initial data table.s
 #' @param pivot_cols \code{character} (NULL). Columns to be used as pivot in rows and cols.
 #' @param max_n_pivot_cols \code{numeric} (100). Maximum unique values for a \code{pivot_cols} if pivot_cols = NULL
 #' @param indicator_cols \code{character} (NULL). Columns on which indicators will be calculated.
@@ -163,6 +165,8 @@ extract_bsPopover <- function (id, title, content, placement = "bottom", trigger
 
 shinypivottabler2 <- function(input, output, session,
                               data,
+                              headername = NULL,
+                              footername = NULL,
                               pivot_cols = NULL,
                               indicator_cols = NULL,
                               remove_indicator=NULL,
@@ -791,6 +795,9 @@ shinypivottabler2 <- function(input, output, session,
         shiny::withProgress(message = 'Preparing the export...', value = 0.5, {
           wb <- createWorkbook(creator = "Shiny pivot table")
           addWorksheet(wb, "Pivot table")
+          addWorksheet(wb=wb, sheetName="Pivot table", header=c(headername, "", ""),footer=c(footername, "", ""))
+          writeData(wb=wb, sheet="Pivot table", x= headername, startRow = 1)
+          writeData(wb=wb, sheet="Pivot table", x= footername, startRow = 2)
 
           pt$writeToExcelWorksheet(wb = wb, wsName = "Pivot table",
                                    topRowNumber = 1, leftMostColumnNumber = 1,
