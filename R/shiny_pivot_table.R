@@ -794,7 +794,6 @@ shinypivottabler2 <- function(input, output, session,
       if (! is.null(pt)) {
         shiny::withProgress(message = 'Preparing the export...', value = 0.5, {
           wb <- createWorkbook(creator = "Shiny pivot table")
-          addWorksheet(wb, "Pivot table")
           addWorksheet(wb=wb, sheetName="Pivot table", header=c(headername, "", ""),footer=c(footername, "", ""))
           writeData(wb=wb, sheet="Pivot table", x= headername, startRow = 1)
           writeData(wb=wb, sheet="Pivot table", x= footername, startRow = 2)
