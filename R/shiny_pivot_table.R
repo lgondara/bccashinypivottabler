@@ -833,7 +833,7 @@ shinypivottablerUI2 <- function(id,
 
   fluidPage(
     conditionalPanel(condition = paste0("output['", ns("show_title"), "']"),
-                     div(h2(HTML("<b>Shiny pivot table - build your own table</b>")), style = paste0("color: ", app_colors[2], "; margin-left: 15px;"))
+                     div(h2(HTML("<b> Build your own pivot table</b>")), style = paste0("color: ", app_colors[2], "; margin-left: 15px;"))
     ),
 
     br(),
