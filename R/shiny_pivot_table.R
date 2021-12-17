@@ -165,8 +165,8 @@ extract_bsPopover <- function (id, title, content, placement = "bottom", trigger
 
 shinypivottabler2 <- function(input, output, session,
                               data,
-                              headername = "",
-                              footername = "",
+                              headername = " ",
+                              footername = " ",
                               pivot_cols = NULL,
                               indicator_cols = NULL,
                               remove_indicator=NULL,
