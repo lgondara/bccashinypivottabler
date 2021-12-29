@@ -125,7 +125,7 @@ extract_bsPopover <- function (id, title, content, placement = "bottom", trigger
 #' @param input shiny input
 #' @param output shiny input
 #' @param session shiny input
-#' @param id \code{character}. An ID string
+#' @param id \code{character}. An ID string.
 #' @param headername \code{character}. An name used in Excel header when download the table.
 #' @param footername \code{character}. An name used in Excel footer when download the table.
 #' @param app_colors \code{character}. Vector of two colors c("#59bb28", "#217346") (borders)
@@ -827,13 +827,14 @@ shinypivottabler2 <- function(input, output, session,
 #' @rdname shiny_pivot_table
 #'
 shinypivottablerUI2 <- function(id,
+                                table_title = "Build your own pivot table",
                                 app_colors = c("#59bb28", "#217346"),
                                 app_linewidth = 8) {
   ns <- shiny::NS(id)
 
   fluidPage(
     conditionalPanel(condition = paste0("output['", ns("show_title"), "']"),
-                     div(h2(HTML("<b> Build your own pivot table</b>")), style = paste0("color: ", app_colors[2], "; margin-left: 15px;"))
+                     div(h2(HTML(paste0("<b> ", table_title, "<b>"))), style = paste0("color: ", app_colors[2], "; margin-left: 15px;"))
     ),
 
     br(),
