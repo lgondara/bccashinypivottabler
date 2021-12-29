@@ -27,6 +27,7 @@ shinypivottabler2(
 
 shinypivottablerUI2(
   id,
+  table_title = "Build your own pivot table",
   app_colors = c("#59bb28", "#217346"),
   app_linewidth = 8
 )
@@ -77,7 +78,9 @@ Available fields are :
 \item{\code{idcs:}}{ idcs to be displayed (list of named list), see the example to get the fields.}
 }}
 
-\item{id}{\code{character}. An ID string}
+\item{id}{\code{character}. An ID string.}
+
+\item{table_title}{\code{character}. An name used in the table.}
 
 \item{app_colors}{\code{character}. Vector of two colors c("#59bb28", "#217346") (borders)}
 

@@ -126,6 +126,7 @@ extract_bsPopover <- function (id, title, content, placement = "bottom", trigger
 #' @param output shiny input
 #' @param session shiny input
 #' @param id \code{character}. An ID string.
+#' @param table_title \code{character}. An name used in the table.
 #' @param headername \code{character}. An name used in Excel header when download the table.
 #' @param footername \code{character}. An name used in Excel footer when download the table.
 #' @param app_colors \code{character}. Vector of two colors c("#59bb28", "#217346") (borders)
