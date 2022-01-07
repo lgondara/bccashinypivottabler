@@ -1,7 +1,28 @@
 ###############################
 ###  PIVOT TABLE FOR SHINY  ###
 ###############################
-
+#' Title Rounds the count number
+#'
+#' @param cnt input number.
+#' @param seed_n seed.
+#'
+#' @return round number
+#' @export
+#'
+rRound <- function(cnt, seed_n) {
+  set.seed(seed_n)
+  prob <- runif(1, 0, 1)
+  end_num<-cnt%%10
+  len=length(cnt)
+  for (i in 1:len) {
+    if (end_num[i]==1|end_num[i]==6) {if (prob<=0.2) {cnt[i]=ceil(cnt[i]/5)*5} else {cnt[i]=floor(cnt[i]/5)*5}}
+    else if (end_num[i]==2|end_num[i]==7) {if (prob<=0.4) {cnt[i]=ceil(cnt[i]/5)*5} else {cnt[i]=floor(cnt[i]/5)*5}}
+    else if (end_num[i]==3|end_num[i]==8) {if (prob<=0.6) {cnt[i]=ceil(cnt[i]/5)*5} else {cnt[i]=floor(cnt[i]/5)*5}}
+    else if (end_num[i]==4|end_num[i]==9) {if (prob<=0.8) {cnt[i]=ceil(cnt[i]/5)*5} else {cnt[i]=floor(cnt[i]/5)*5}}
+    else {cnt[i]=cnt[i]}
+  }
+  return(as.integer(cnt))
+}
 
 get_expr2 <- function(idc, target, additional_expr,removal) {
   text_idc <- c(
