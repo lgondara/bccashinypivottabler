@@ -17,6 +17,6 @@ You can install the development version of bccashinypivottabler from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("yzr1996/bccashinypivottabler")
+devtools::install_github("BCCanDataAnalytics/bccashinypivottabler")
 ```
 
