@@ -450,7 +450,7 @@ shinypivottabler2 <- function(input, output, session,
     })
   })
 
-  store_format <- reactiveValues("format_digit" = 1,
+  store_format <- reactiveValues("format_digit" = 0,
                                  "format_prefix" = "",
                                  "format_suffix" = "",
                                  "format_sep_thousands" = ",",
@@ -608,7 +608,7 @@ shinypivottabler2 <- function(input, output, session,
                                  format = list("digits" = nb_decimals, "nsmall" = nb_decimals,
                                                "decimal.mark" = sep_decimal,
                                                "big.mark" = ifelse(sep_thousands == "None", "", sep_thousands),
-                                               scientific = F),
+                                               scientific = T),
                                  cellStyleDeclarations = list("xl-value-format" = paste0(prefix, ifelse(sep_thousands == "None", "", paste0("#", sep_thousands)), "##0", ifelse(nb_decimals > 0, paste0(sep_decimal, paste0(rep(0, nb_decimals), collapse = "")), ""), suffix)),
                                  visible = ifelse(is.null(combine_target), T, F))
             if (! is.null(combine_target) && combine_target != "") {
