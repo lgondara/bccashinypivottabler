@@ -605,10 +605,10 @@ shinypivottabler2 <- function(input, output, session,
             pt$defineCalculation(calculationName = paste0(target, "_", tolower(idc), "_", index),
                                  caption = label,
                                  summariseExpression = get_expr2(idc, target, additional_expr = c(get_additional_expr_num(), get_additional_expr_char()), removal=remove_indicator),
-                                 format = list("digits" = nb_decimals, "nsmall" = nb_decimals,
+                                 format = list("digits" = 1, "nsmall" = nb_decimals,
                                                "decimal.mark" = sep_decimal,
                                                "big.mark" = ifelse(sep_thousands == "None", "", sep_thousands),
-                                               scientific = T),
+                                               scientific = F),
                                  cellStyleDeclarations = list("xl-value-format" = paste0(prefix, ifelse(sep_thousands == "None", "", paste0("#", sep_thousands)), "##0", ifelse(nb_decimals > 0, paste0(sep_decimal, paste0(rep(0, nb_decimals), collapse = "")), ""), suffix)),
                                  visible = ifelse(is.null(combine_target), T, F))
             if (! is.null(combine_target) && combine_target != "") {
