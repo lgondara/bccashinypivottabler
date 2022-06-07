@@ -450,7 +450,7 @@ shinypivottabler2 <- function(input, output, session,
     })
   })
 
-  store_format <- reactiveValues("format_digit" = 0,
+  store_format <- reactiveValues("format_digit" = 1,
                                  "format_prefix" = "",
                                  "format_suffix" = "",
                                  "format_sep_thousands" = ",",
